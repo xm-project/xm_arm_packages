@@ -1,0 +1,19 @@
+controller_list:
+  - name: mobile_base/xm_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - joint_waist
+      - joint_big_arm
+      - joint_fore_arm
+      - joint_wrist
+      - joint_small_arm
+
+  - name: mobile_base/xm_lifting_controller
+    action_ns: lifting_cmd
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - joint_lifting
+      

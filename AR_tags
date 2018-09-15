@@ -1,0 +1,8 @@
+sudo chmod 777 /dev/ttyUSB0
+(sudo chmod 777 /dev/ttyACM0)
+roslaunch handsfree_hw xm_bot.launch (xm_bot_sim.launch , xm_bot_arm_sim.launch)
+roslaunch xm_arm_nav xm_arm.launch
+sudo -s
+rosrun libfreenect2_ros_grabber libfreenect2_ros_grabber
+rosrun xm_arm_nav xm_arm_artags.py
+roslaunch ar_track_alvar xm_indiv.launch

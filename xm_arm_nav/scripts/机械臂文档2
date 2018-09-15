@@ -1,0 +1,39 @@
+move_arm.py
+[测试]升降
+node:          move_arm_node
+client:        /mobile_base/xm_lifting_controller/lifting_cmd
+
+obstacles_gen.py
+生成障碍物
+node:          obstacles_gen
+publisher:     planning_scene
+server:        xm_obstacles
+
+trial.py
+[测试]障碍物的生成
+node:          trial__demo
+client:        xm_obstacles
+
+xm_arm_ar.py
+[测试]控制机械臂抓取和放置贴有AR标签的瓶子
+
+xm_arm_artags.py
+[测试]控制机械臂指向AR标签
+
+xm_arm_controller_level.py
+python实现的机械臂控制器
+client:        /mobile_base/xm_arm_controller/follow_joint_trajectory
+client:        /mobile_base/xm_lifting_controller/lifting_cmd
+client:        /mobile_base/gripper_command
+
+xm_arm_cv.py
+[测试]控制机械臂抓取视觉目标
+
+xm_arm_ik_server.py
+python实现的机械臂逆运动学解算器
+
+xm_arm_moveit_level.py
+使用moveit接口实现的fk和ik
+
+xm_arm_smach.py
+控制机械臂的抓取和放置任务

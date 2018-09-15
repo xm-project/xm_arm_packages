@@ -1,0 +1,13 @@
+controller_list:
+  - name: fake_xm_arm_controller
+    joints:
+      - joint_lifting
+      - joint_waist
+      - joint_big_arm
+      - joint_fore_arm
+      - joint_wrist
+      - joint_small_arm
+  - name: fake_xm_gripper_controller
+    joints:
+      - joint_left_finger
+      - joint_right_finger
